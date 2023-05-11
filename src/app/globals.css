@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+	.border-default {
+		@apply border-slate-200 dark:border-slate-200/20;
+	}
+
+	.focus-default {
+		@apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-50 dark:focus-visible:ring-offset-background focus-visible:ring-background/50 dark:focus-visible:ring-slate-50/30 rounded-lg;
+	}
+}

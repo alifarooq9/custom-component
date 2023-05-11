@@ -5,9 +5,9 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-	title: "Custom Components Example | Next.js + TypeScript + Tailwind CSS",
+	title: "Custom UI Components Example | Next.js + TypeScript + Tailwind CSS",
 	description:
-		"A starter template for TypeScript and Tailwind CSS in Next.js with a custom component.",
+		"A starter template for TypeScript and Tailwind CSS in Next.js with custom ui components.",
 };
 
 export default function RootLayout({
