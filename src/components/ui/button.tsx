@@ -62,11 +62,13 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 						props.loadingPlaceholder
 					) : (
 						<>
-							{Children.map(props.children, (child) => {
-								return cloneElement(child as any, {
-									["data-state"]: dataAttrValue,
-								});
-							})}
+							{Children.count(props.children) > 1
+								? Children.map(props.children, (child) => {
+										return cloneElement(child as any, {
+											["data-state"]: dataAttrValue,
+										});
+								  })
+								: props.children}
 						</>
 					)}
 				</span>

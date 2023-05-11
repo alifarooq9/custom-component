@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { DownloadIcon } from "lucide-react";
 import { useState } from "react";
 
 export default function Home() {
@@ -21,7 +22,7 @@ export default function Home() {
 						}, 3000);
 					}}
 				>
-					<span>Button</span>
+					Button
 				</Button>
 				<Button
 					variant="border"
@@ -34,7 +35,7 @@ export default function Home() {
 						}, 3000);
 					}}
 				>
-					<span>Button</span>
+					Button
 				</Button>
 				<Button
 					variant="secondary"
@@ -47,7 +48,7 @@ export default function Home() {
 						}, 3000);
 					}}
 				>
-					<span>Button</span>
+					Button
 				</Button>
 				<Button
 					variant="ghost"
@@ -60,7 +61,23 @@ export default function Home() {
 						}, 3000);
 					}}
 				>
-					<span>Button</span>
+					Button
+				</Button>
+				<Button
+					size="lg"
+					isLoading={loading}
+					onClick={() => {
+						setLoading(true);
+						setTimeout(() => {
+							setLoading(false);
+						}, 3000);
+					}}
+					loadingPlaceholder="Downloading..."
+				>
+					{loading === false && (
+						<DownloadIcon className="mr-1.5 w-4 h-4" />
+					)}
+					<span>Download</span>
 				</Button>
 			</div>
 		</main>
