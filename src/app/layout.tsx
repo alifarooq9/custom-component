@@ -1,3 +1,4 @@
+import { cn } from "@/utils/classNames";
 import "./globals.css";
 import { Inter } from "next/font/google";
 
@@ -15,8 +16,15 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html lang="en">
-			<body className={inter.className}>{children}</body>
+		<html lang="en" className="dark">
+			<body
+				className={cn(
+					inter.className,
+					"antialiased min-h-screen w-full bg-slate-50 text-background dark:bg-background dark:text-slate-50"
+				)}
+			>
+				{children}
+			</body>
 		</html>
 	);
 }
