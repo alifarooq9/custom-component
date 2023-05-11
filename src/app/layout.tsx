@@ -20,7 +20,7 @@ export default function RootLayout({
 			<body
 				className={cn(
 					inter.className,
-					"antialiased min-h-screen w-full bg-slate-50 text-background dark:bg-background dark:text-slate-50"
+					"min-h-screen w-full bg-slate-50 text-background dark:bg-background dark:text-slate-50"
 				)}
 			>
 				{children}
