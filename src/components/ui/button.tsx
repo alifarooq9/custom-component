@@ -1,11 +1,11 @@
 import { cn } from "@/utils/classNames";
 import { cva, VariantProps } from "class-variance-authority";
 import { Loader2 } from "lucide-react";
-import {
-	ButtonHTMLAttributes,
+import React, {
 	cloneElement,
 	forwardRef,
 	Children,
+	ComponentProps,
 } from "react";
 
 const buttonVariants = cva(
@@ -36,7 +36,7 @@ const buttonVariants = cva(
 );
 
 export interface ButtonProps
-	extends ButtonHTMLAttributes<HTMLButtonElement>,
+	extends ComponentProps<"button">,
 		VariantProps<typeof buttonVariants> {
 	isLoading?: boolean;
 	loadingPlaceholder?: string;

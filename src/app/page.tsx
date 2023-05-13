@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import Input from "@/components/ui/input";
 import { DownloadIcon } from "lucide-react";
 import { useState } from "react";
 
@@ -79,6 +80,13 @@ export default function Home() {
 					)}
 					<span>Download</span>
 				</Button>
+			</div>
+
+			<div className="flex flex-col items-center justify-center space-y-3">
+				<p className="font-medium">Input Styles</p>
+
+				<Input placeholder="Type here..." variant="default" />
+				<Input placeholder="Type here..." variant="large" />
 			</div>
 		</main>
 	);
